@@ -1,0 +1,23 @@
+// 폴더 우클릭 후 git bash
+
+1. git init 
+  깃 초기화
+
+2. git add . 
+  파일들 add
+
+3. git remote origin 브랜치명 레파지토리 주소
+  레파지토리 주소 연결
+  레파지토리 브랜치 연결
+  해당 브랜치가 없으면 생성됨
+
+4. git commit -m "메세지"
+  add된 파일들을 commit함
+  입력된 메세지가 등록됨
+  
+5. git push origin 브랜치명
+  commit된 파일들을 입력한 브랜치로 push함
+  
+6. 만약 push가 실패시 pull로 레파지토리를 복사해와야함
+
+7. git pull origin 브랜치명 --allow-unrelated-histories

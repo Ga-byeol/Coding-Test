@@ -6,7 +6,7 @@
 2. git add . 
   파일들 add
 
-3. git remote origin 브랜치명 레파지토리 주소
+3. git remote add origin 레파지토리 주소
   레파지토리 주소 연결
   레파지토리 브랜치 연결
   해당 브랜치가 없으면 생성됨

@@ -31,7 +31,7 @@ class Solution
                 			str = " no";
                 		}
 	    		}
-            	System.out.println("#" + test_case + str);
+            		System.out.println("#" + test_case + str);
 		}
 	}
 }

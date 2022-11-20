@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
 public class Main {
-    static int[][] parent = new int[26][2];
-    
-    static void preorder(char root)
+    static int[][] parent = new int[26][2]; // parent[부모노드][0] : 왼쪽 자식
+                                            // parent[부모노드][1] : 오른쪽 자식
+    static void preorder(char root) // 전위 순회
     {
         if(root == '.') return;
         else
@@ -14,7 +14,7 @@ public class Main {
         }
     }
     
-    static void inorder(char root)
+    static void inorder(char root) // 중위 순회
     {
         if(root == '.') return;
         else
@@ -25,7 +25,7 @@ public class Main {
         }
     }
     
-    static void postorder(char root)
+    static void postorder(char root) // 후위 순회
     {
         if (root == '.') return;
         else 
@@ -39,7 +39,7 @@ public class Main {
       Scanner s = new Scanner(System.in);
       int n = s.nextInt();
       char x,y,z;
-      for(int i=0;i<n;i++)
+      for(int i=0;i<n;i++) // 부모노드의 자식 노드 받기
       {
           x = s.next().charAt(0);
           y = s.next().charAt(0);

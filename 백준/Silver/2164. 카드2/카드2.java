@@ -2,18 +2,18 @@ import java.util.*;
 
 public class Main {
     public static void main(String args[]) {
-      Queue<Integer> queue = new LinkedList<>();
       Scanner sc = new Scanner(System.in);
-      
       int n = sc.nextInt();
+      if(n < 2){
+          System.out.println(1);
+          return;
+      }
+      int pow = 1;
       
-      for(int i = 1; i <= n; i++){
-          queue.offer(i);
-      }
-      for(int i = 0; i < n-1; i++){
-          queue.remove();
-          queue.offer(queue.poll());
-      }
-      System.out.println(queue.peek());
+      while(n > pow) pow = pow << 1;
+      
+      pow = pow >> 1;
+      
+      System.out.println((n-pow) * 2);
     }
 }

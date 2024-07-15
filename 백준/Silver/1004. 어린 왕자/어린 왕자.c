@@ -11,15 +11,11 @@ int main() {
 	scanf("%d", &t);
 
 	while (t) {
-		int start_x, start_y, end_x, end_y;
+		int start_x, start_y, end_x, end_y, n, cnt = 0;
 
 		scanf("%d %d %d %d", &start_x, &start_y, &end_x, &end_y);
 
-		int n;
-		
 		scanf("%d", &n);
-
-		int cnt = 0;
 
 		while (n) {
 			int x, y, r;
@@ -29,9 +25,6 @@ int main() {
 			double end = cp(x, y, end_x, end_y);
 
 			if (start <= r != end <= r) cnt++;
-			//if (end <= r) cnt++;
-			//printf("%lf\n", cp(x, y, start_x, start_y));	
-			//printf("%lf\n", cp(x, y, end_x, end_y));
 			n--;
 		}
 		printf("%d\n", cnt);

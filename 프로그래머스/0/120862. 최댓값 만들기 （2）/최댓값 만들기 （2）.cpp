@@ -5,5 +5,6 @@ using namespace std;
 
 int solution(vector<int> numbers) {
     sort(numbers.begin(), numbers.end());
-    return numbers[0]*numbers[1] > numbers[numbers.size()-1]*numbers[numbers.size()-2] ? numbers[0]*numbers[1] : numbers[numbers.size()-1]*numbers[numbers.size()-2];
+    int l = numbers.size();
+    return max(numbers[0]*numbers[1], numbers[l-1]*numbers[l-2]);
 }

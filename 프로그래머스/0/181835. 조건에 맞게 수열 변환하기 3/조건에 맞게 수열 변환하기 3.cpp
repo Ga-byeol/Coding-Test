@@ -4,17 +4,7 @@
 
 using namespace std;
 
-vector<int> solution(vector<int> arr, int k) {
-    vector<int> v;
-    if(k%2 == 1){
-        for(int n : arr){
-            v.push_back(n*k);
-        }
-    }
-    else {
-        for(int n : arr){
-            v.push_back(n+k);
-        }
-    }
+vector<int> solution(vector<int> v, int k) {
+    transform(v.begin(),v.end(),v.begin(),[k](int x){return k&1?x*k:x+k;});
     return v;
 }

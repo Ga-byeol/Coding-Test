@@ -6,6 +6,12 @@ vector<int> v[51];
 int cnt = 0;
 int n, k;
 
+void dfs(int node)
+{
+    for (int x : v[node]) dfs(x);
+    if (v[node].empty()) cnt++; 
+}
+
 void removeNode() {
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < v[i].size(); j++) {
@@ -15,16 +21,6 @@ void removeNode() {
             }
         }
     }
-}
-
-bool isLeaf(int node) {
-    return v[node].empty();
-}
-
-void dfs(int node)
-{
-    for (int x : v[node]) dfs(x);
-    if (isLeaf(node)) cnt++; 
 }
 
 int main() {
